@@ -1,0 +1,39 @@
+#transitionBox{
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    color: white;
+    margin: 20px Auto;
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.5s ease-out;
+}
+
+button{
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 10px;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+}
+
+
+#transitionBox.animate{
+    animation: fadeInMoveUp 1s forwards;
+}
+
+@keyframes fadeInMoveUp{
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
